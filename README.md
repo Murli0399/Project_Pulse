@@ -2,6 +2,18 @@
 
 **Project Pulse** is a dynamic web application designed to serve as an efficient project portfolio management system. With its comprehensive features and user-friendly interface, Project Pulse enables you to effortlessly manage and monitor your project portfolios. Stay in control of your projects by tracking progress, managing tasks, allocating resources, and collaborating with team members in real time. Experience the pulse of your projects with Project Pulse and ensure successful delivery through effective project portfolio management.
 
+# Tech Stack
+### Backend:
+- Language: Python
+- Framework: Flask (a lightweight and flexible web framework)
+- Database: MongoDB (a NoSQL database for storing the application data)
+- ORM (Object-Relational Mapping): pymongo (Python library for MongoDB)
+
+### Frontend:
+- JavaScript library: React (for building user interfaces)
+- State management: Redux (for managing application state)
+- UI framework: Material-UI (provides pre-styled components following the Material Design guidelines)
+- HTTP client: Axios (for making API requests to the backend)
 
 ## Portfolio Manager Endpoints:
 
