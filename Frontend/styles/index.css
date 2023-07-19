@@ -1,0 +1,205 @@
+.navbar {
+  background: #11161a;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar h2 {
+  margin-left: 80px;
+  font-size: 30px;
+}
+
+.navbar p {
+  color: white;
+  margin-right: 80px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.navbar p:hover {
+  color: #3399ff;
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 60px;
+}
+
+.first {
+  background: #fcfcd0;
+  display: flex;
+}
+
+.first .main {
+  width: 90%;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  padding-left: 75px;
+}
+
+.first .main h3 {
+  color: black;
+  font-weight: 600;
+  font-size: 70px;
+}
+
+.first .main p {
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.first .img {
+  width: 100%;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  padding-right: 75px;
+}
+
+.first .img img {
+  width: 100%;
+}
+
+form {
+  border: 3px solid #f1f1f1;
+}
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #3399ff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+
+.cont {
+  padding: 25px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto;
+  border: 1px solid #888;
+  width: 35%;
+  border-radius: 5px;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+
+
+@media screen and (max-width: 920px) {
+  .navbar h2 {
+    margin-left: 50px;
+  }
+
+  .navbar p {
+    margin-right: 50px;
+  }
+
+  .first {
+    flex-wrap: wrap;
+  }
+
+  .first .main {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding: 40px;
+  }
+
+  .first .img {
+    margin-top: 50px;
+    padding: 0 40px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}
