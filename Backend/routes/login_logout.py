@@ -20,7 +20,7 @@ def login():
 
     if existing_user['password'] == password:
         Authtable.insert_one({'username': username})
-        return jsonify({"message": "Logged in successfully!"}), 200
+        return jsonify({"message": True, "uname":username}), 200
     else:
         return jsonify({"message": "Incorrect password. Please try again"}), 401
     
