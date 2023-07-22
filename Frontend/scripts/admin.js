@@ -11,6 +11,42 @@ show_manager = document.getElementById("show_manager");
 const url = "http://127.0.0.1:5000/";
 
 let currentManager = "";
+const key = "projectPulseUser";
+let currentUser = JSON.parse(localStorage.getItem(key));
+
+if (currentUser == undefined || currentUser.role == "Manager") {
+  window.location.href = "index.html";
+}
+
+document.getElementById("adminLogout").addEventListener("click", () => {
+  const data = {
+    username: currentUser.uname,
+  };
+
+  // Replace 'your_login_endpoint' with the actual login endpoint URL
+  fetch(url + "logout", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // Handle the data retrieved from the server after a successful login
+      // Redirect the user to the dashboard or perform any other actions as needed
+      localStorage.removeItem(key);
+      window.location.href = "index.html";
+      alert(data.message);
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during the fetch request
+      console.error("Error:", error);
+      // Show an error message or perform any other error handling as needed
+    });
+});
+
+
 
 // Function to handle form submission
 function submitForm(event) {
