@@ -20,10 +20,31 @@ def login():
 
     if existing_user['password'] == password:
         Authtable.insert_one({'username': username})
-        return jsonify({"message": True, "uname":username}), 200
+        return jsonify({"message": True, "uname":username, "id":str(existing_user['_id'])}), 200
     else:
         return jsonify({"message": "Incorrect password. Please try again"}), 401
     
+
+def admin_login():
+    data = request.get_json()
+    username = data.get('username')
+    password = data.get('password')
+
+    if not username or not password:
+        return jsonify({"message": "Username and password are required"}), 400
+
+    if username != 'admin':
+        return jsonify({"message": "User not found. Please check your username"}), 404
+
+    active_user = Authtable.find_one({'username': username})
+    if active_user is not None:
+        return jsonify({"message": "You are already logged in"}), 403
+
+    if password == 'admin1234':
+        Authtable.insert_one({'username': username})
+        return jsonify({"message": True, "uname":username}), 200
+    else:
+        return jsonify({"message": "Incorrect password. Please try again"}), 401
 
 
 def logout():

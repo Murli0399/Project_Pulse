@@ -35,6 +35,7 @@ from routes.resource_operations import (
 )
 from routes.login_logout import (
     login,
+    admin_login,
     logout
 )
 
@@ -43,6 +44,8 @@ app = Flask(__name__)
 CORS(app)
 
 app.route("/login", methods=["POST"])(login)
+
+app.route("/admin/login", methods=["POST"])(admin_login)
 
 app.route("/logout", methods=["POST"])(logout)
 

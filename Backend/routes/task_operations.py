@@ -19,6 +19,7 @@ def get_all_tasks():
             'resource_id': task['resource_id'],
             'task_name': task['task_name'],
             'status': task['status'],
+            'description': task['description'],
         })
     return jsonify(result), 200
 
@@ -33,6 +34,7 @@ def get_task(task_id):
             'resource_id': task['resource_id'],
             'task_name': task['task_name'],
             'status': task['status'],
+            'description': task['description'],
         }
         return jsonify(result), 200
     else:
@@ -46,6 +48,7 @@ def create_task():
     resource_id = data.get('resource_id', "")
     task_name = data['task_name']
     status = data['status']
+    description = data['description']
 
     # Perform validation and error handling as needed
 
@@ -55,6 +58,7 @@ def create_task():
             'resource_id': resource_id,
             'task_name': task_name,
             'status': status,
+            'description': description,
         }).inserted_id
 
         task_name = task_name  # Replace with the actual task name
@@ -74,6 +78,7 @@ def update_task(task_id):
     resource_id = data.get('resource_id', "")
     task_name = data['task_name']
     status = data['status']
+    description = data['description']
 
     # Perform validation and error handling as needed
 
@@ -84,6 +89,7 @@ def update_task(task_id):
             'resource_id': resource_id,
             'task_name': task_name,
             'status': status,
+            'description': description,
         }}
     )
 
