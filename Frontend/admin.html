@@ -5,18 +5,319 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/admin.css" />
+    <link rel="stylesheet" href="styles/project_admin.css" />
+    <link rel="stylesheet" href="styles/resource_admin.css" />
+    <link rel="stylesheet" href="styles/dashboard_admin.css" />
     <title>Project Pulse</title>
   </head>
   <body>
     <div class="sidenav">
-      <div class="heading">
-        <h1>Project Pulse</h1>
+      <div class="admin">
+        <img src="Img/admin.jpg" alt="Admin" />
+        <h1>Murli Khaire</h1>
       </div>
-      <div class="">
-        <h1>Project Pulse</h1>
+
+      <div class="items">
+        <p id="dashboard">Dashboard</p>
+        <p id="manager">Manager</p>
+        <p id="project">Project</p>
+        <p id="resource">Resource</p>
+        <p>Dummy</p>
       </div>
     </div>
 
-    <div class="main"></div>
+    <div class="main">
+      <div class="heading">
+        <h1>Project Pulse</h1>
+      </div>
+
+      <div id="dashboardView">
+        <div id="show_dashboard">
+          <div class="card">
+            <h2>Total Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="card">
+            <h2>Total Project</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="card">
+            <h2>Total Resource</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div class="graphImg">
+          <img src="Img/graph1.png" alt="" />
+          <img src="Img/2nd.png" alt="" />
+        </div>
+      </div>
+
+      <div id="managerView">
+        <div class="managerHead">
+          <h3>Managers Detail</h3>
+          <p onclick="document.getElementById('id01').style.display='block'">
+            Add Manager
+          </p>
+        </div>
+        <div class="data">
+          <header class="table_head">
+            <p class="rewHead head-1">Name</p>
+            <p class="rewHead head-2">Email</p>
+            <p class="rewHead head-3">Role</p>
+            <p class="rewHead head-4">Status</p>
+            <p class="rewHead head-5">Start Date</p>
+            <p class="rewHead head-6">Action</p>
+          </header>
+
+          <div id="show_manager"></div>
+        </div>
+      </div>
+
+      <div id="projectView">
+        <div class="projectHead">
+          <h3>Projects Detail</h3>
+          <p onclick="document.getElementById('id02').style.display='block'">
+            Add Project
+          </p>
+        </div>
+        <div class="data">
+          <header class="table_head">
+            <p class="rewHead head-1">Project Name</p>
+            <p class="rewHead head-2">Manager Name</p>
+            <p class="rewHead head-3">Status</p>
+            <p class="rewHead head-4">Start Date</p>
+            <p class="rewHead head-5">End Date</p>
+            <p class="rewHead head-6">Action</p>
+          </header>
+
+          <div id="show_project"></div>
+        </div>
+      </div>
+
+      <div id="resourceView">
+        <div class="resourceHead">
+          <h3>Resource Detail</h3>
+          <p onclick="document.getElementById('id03').style.display='block'">
+            Add Resource
+          </p>
+        </div>
+        <div class="data">
+          <header class="table_head">
+            <p class="rewHead head-1">Resource Name</p>
+            <p class="rewHead head-2">Type</p>
+            <p class="rewHead head-3">Link</p>
+            <p class="rewHead head-4">Availability</p>
+            <p class="rewHead head-5">No. of Task</p>
+            <p class="rewHead head-6">Action</p>
+          </header>
+
+          <div id="show_resource"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manager Adding Model Html here do not touch it -->
+    <div id="id01" class="modal">
+      <form id="managerForm" class="modal-content animate">
+        <div class="imgcontainer">
+          <h1>Add Manager</h1>
+        </div>
+
+        <div class="cont">
+          <label for="name"><b>Name</b></label>
+          <input
+            type="text"
+            id="inputName"
+            placeholder="Enter Name"
+            name="name"
+            required
+          />
+
+          <label for="email"><b>Email</b></label>
+          <input
+            type="email"
+            id="inputEmail"
+            placeholder="Enter Email"
+            name="email"
+            required
+          />
+
+          <label for="role"><b>Role</b></label>
+          <select id="inputRole" name="role" required>
+            <option value="" disabled selected>Select Role</option>
+            <option value="Administrator">Administrator</option>
+            <option value="Viewer">Viewer</option>
+          </select>
+
+          <label for="status"><b>Status</b></label>
+          <select id="inputStatus" name="status" required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+
+          <label for="startdate"><b>Start Date</b></label>
+          <input id="startDate" type="date" name="startdate" required />
+        </div>
+
+        <div class="btnCont" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Project Adding Model Html here do not touch it -->
+    <div id="id02" class="modal">
+      <form id="projectForm" class="modal-content animate">
+        <div class="imgcontainer">
+          <h1>Add Project</h1>
+        </div>
+
+        <div class="cont">
+          <label for="name"><b>Project Name</b></label>
+          <input
+            type="text"
+            id="projectName"
+            placeholder="Enter Name"
+            name="name"
+            required
+          />
+
+          <label for="status"><b>Status</b></label>
+          <select id="projectStatus" name="status" required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="Planned">Planned</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+
+          <label for="startdate"><b>Start Date</b></label>
+          <input id="projectStartDate" type="date" name="startdate" required />
+
+          <label for="enddate"><b>End Date</b></label>
+          <input id="projectEndDate" type="date" name="enddate" required />
+        </div>
+
+        <div class="btnCont" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id02').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Resource Adding Model Html here do not touch it -->
+    <div id="id03" class="modal">
+      <form id="resourceForm" class="modal-content animate">
+        <div class="imgcontainer">
+          <h1>Add Resource</h1>
+        </div>
+
+        <div class="cont">
+          <label for="name"><b>Resource Name</b></label>
+          <input
+            type="text"
+            id="resourceName"
+            placeholder="Enter Name"
+            name="name"
+            required
+          />
+
+          <label for="type"><b>Type</b></label>
+          <input
+            type="text"
+            id="resourceType"
+            placeholder="Enter Type"
+            name="type"
+            required
+          />
+
+          <label for="link"><b>link</b></label>
+          <input
+            type="text"
+            id="resourceLink"
+            placeholder="Enter link"
+            name="link"
+            required
+          />
+
+          <label for="availability"><b>Availability</b></label>
+          <select id="resourceAvailability" name="availability" required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="Available">Available</option>
+            <option value="Not Available">Not Available</option>
+          </select>
+        </div>
+
+        <div class="btnCont" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id03').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="id04" class="modal">
+      <form id="assignProject" class="modal-content animate">
+        <div class="imgcontainer">
+          <h1>Aassign Project</h1>
+        </div>
+
+        <div class="cont auto-list">
+          <label for="name"><b>Project Name</b></label>
+          <input
+            type="text"
+            id="projectNameHere"
+            placeholder="Enter Project Name"
+            name="name"
+            required
+          />
+
+          <ul class="autocompleted-list" id="project-list">
+            <li>project-1</li>
+            <li>project-2</li>
+            <li>project-3</li>
+            <li>project-4</li>
+            <li>project-4</li>
+            <li>project-4</li>
+            <li>project-4</li>
+            <li>project-4</li>
+            <li>project-4</li>
+            <li>project-5</li>
+          </ul>
+
+        </div>
+
+        <div class="btnCont" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id04').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
   </body>
+
+  <script src="scripts/admin.js"></script>
 </html>

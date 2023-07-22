@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+from pymongo.errors import OperationFailure
 from dotenv import load_dotenv
 import os
 
@@ -14,7 +15,23 @@ db = client['Mongo']
 
 # Define collections
 managers = db['Manager']
-project = db['project']
-task = db['Task']
-resource = db['Resource']
+projects = db['Project']
+tasks = db['Task']
+resources = db['Resource']
+Authtable = db['Authtable']
 user = db['user']
+
+try:
+    managers.create_index([('email', 1)], unique=True)
+    managers.create_index([('username', 1)], unique=True)
+except OperationFailure as e:
+    # Handle the case when the indexes already exist or any other error occurs
+    error_msg = str(e)
+
+
+
+try:
+    projects.create_index([('project_name', 1)], unique=True)
+except OperationFailure as e:
+    # Handle the case when the indexes already exist or any other error occurs
+    error_msg = str(e)
