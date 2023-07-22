@@ -19,7 +19,7 @@
   color: white;
   margin-right: 80px;
   font-size: 25px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .navbar p:hover {
@@ -71,13 +71,15 @@ form {
 }
 
 input[type=text],
-input[type=password] {
+input[type=password],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  outline: none;
 }
 
 button {
@@ -109,6 +111,7 @@ button:hover {
 
 .cont {
   padding: 25px;
+  padding-top: 0;
 }
 
 span.psw {
@@ -134,7 +137,7 @@ span.psw {
   background-color: #fefefe;
   margin: 5px auto;
   border: 1px solid #888;
-  width: 35%;
+  width: 30%;
   border-radius: 5px;
 }
 
