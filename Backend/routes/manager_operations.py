@@ -1,10 +1,13 @@
 from flask import Flask, jsonify, request
 from bson.objectid import ObjectId
 from datetime import datetime
+from pymongo.errors import DuplicateKeyError
 from modals.database import user,managers
+from extra.randomPass import generate_random_string
+from extra.emailSend import send_email
 
 def welcome():
-    return 'Welcome to MongoDB, Mongo!'
+    return 'Welcome to Project Pulse!'
 
 
 # Get all managers
@@ -55,21 +58,35 @@ def create_manager():
     else:
         start_date = ""
     
-    username = data.get('username')
-    password = data.get('password')
+    password = generate_random_string()
 
-    manager_id = managers.insert_one({
-        'name': name,
-        'email': email,
-        'status': status,
-        'role': role,
-        'bio': bio,
-        'start_date': start_date,
-        'username': username,
-        'password': password,
-    }).inserted_id
+    try:
+        manager_id = managers.insert_one({
+            'name': name,
+            'email': email,
+            'status': status,
+            'role': role,
+            'bio': bio,
+            'start_date': start_date,
+            'username': email,
+            'password': password,
+        }).inserted_id
 
-    return jsonify({'message': 'Manager created', 'id': str(manager_id)}), 201
+        subject = "Login Credential"
+        recipient = email
+        body = "Your Login credential is here\n username = your email id\n password is "+password
+
+        if send_email(subject, recipient, body):
+             print("Email sent successfully")
+        else:
+             print("Failed to send email")
+        
+
+        return jsonify({'message': 'Manager created successfully', 'id': str(manager_id)}), 201
+
+    except DuplicateKeyError as e:
+        return jsonify({"message": e.details['keyValue']['email']+' is already registered'}), 409  
+
 
 # Update manager
 def update_manager(manager_id):

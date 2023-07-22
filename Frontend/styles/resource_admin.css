@@ -1,0 +1,97 @@
+
+#resourceView .resourceHead {
+  color: #fff;
+  display: flex;
+  padding: 15px 30px;
+  justify-content: space-between;
+}
+
+#resourceView .resourceHead h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#resourceView .resourceHead p {
+  font-size: 20px;
+  background: #303030;
+  padding: 5px 10px;
+  color: white;
+  border: 1px solid #3399ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#resourceView .resourceHead p:hover {
+  transition: 1s;
+  color: rgb(176, 176, 176);
+}
+
+#resourceView .data {
+  margin: 0 30px;
+  text-align: center;
+}
+
+#resourceView .data .table_head {
+  background: #303030;
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
+  font-size: 0;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#resourceView .data .table_head .rewHead {
+  line-height: 50px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #3399ff;
+}
+
+#resourceView .data .carttable {
+  background: #303030;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 15px auto;
+  padding: 15px 40px;
+  font-size: 15px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+#resourceView .data .carttable .catp {
+  line-height: 20px;
+  font-size: 15px;
+  color: #ff0202;
+  cursor: pointer;
+}
+
+#resourceView .data .carttable .catp:hover {
+  color: rgb(255, 137, 94);
+}
+
+#resourceView .data .head-1 {
+  width: 15%;
+}
+
+#resourceView .data .head-2 {
+  width: 20%;
+}
+
+#resourceView .data .head-3 {
+  width: 12%;
+}
+
+#resourceView .data .head-4 {
+  width: 10%;
+}
+
+#resourceView .data .head-5 {
+  width: 10%;
+}
+
+#resourceView .data .head-6 {
+  width: 10%;
+}
