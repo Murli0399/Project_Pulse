@@ -7,8 +7,8 @@ import os
 load_dotenv()
 
 # Retrieve the MongoDB connection URL from environment variables
-url = os.environ.get('MONGO')
-
+# url = os.environ.get('MONGO')
+url = 'mongodb+srv://murlikhaire28:MurliMongo846285@cluster0.d1h0861.mongodb.net/?retryWrites=true&w=majority'
 # Set up MongoDB connection and select the database
 client = MongoClient(url)
 db = client['Mongo']
