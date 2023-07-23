@@ -19,7 +19,7 @@ Manage project resources, including availability and task assignments.
 Enable real-time collaboration among team members for effective project management.
 
 ## Entity Relationship Diagrams
-[Provide your Entity Relationship Diagrams here]
+[Provide your Entity Relationship Diagrams here](https://github.com/Murli0399/Project_Pulse/blob/01c8f87d145643ed38f0b7ef68eb347003c5601e/img/erd.png)
 
 
 ## Tech Stack
