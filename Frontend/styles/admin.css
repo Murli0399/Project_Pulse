@@ -5,14 +5,15 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  /* background-color: #111; */
+  background-color: #fac742;
   overflow-x: hidden;
 }
 
 .sidenav .admin {
   text-align: center;
   margin: 15px 0;
-  border-bottom: 1px solid #3399ff;
+  border-bottom: 1px solid #9e761b;
 }
 
 .sidenav .admin img {
@@ -21,7 +22,7 @@
 }
 
 .sidenav .admin h1 {
-  color: #3399ff;
+  color: #000000;
   text-align: center;
   padding: 5px 0;
   font-size: 35px;
@@ -30,7 +31,7 @@
 
 .sidenav .items {
   padding: 0 50px;
-  color: #fff;
+  color: #000000;
   font-size: 22px;
   font-weight: 400;
 }
@@ -40,8 +41,9 @@
 }
 
 .sidenav .items p:hover {
+  transition: .5s;
   cursor: pointer;
-  color: #3399ff;
+  color: #e5e5e5;
 }
 
 .sidenav .logoutBtn {
@@ -51,12 +53,12 @@
   bottom: 0;
   left: 0;
   padding: 10px 0px 20px 0;
-  border-top: 1px solid #3399ff;
+  border-top: 1px solid #9e761b;
 }
 
 .sidenav .logoutBtn p {
   font-size: 24px;
-  color: #3399ff;
+  color: #000000;
   font-weight: 500;
   cursor: pointer;
 }
@@ -76,9 +78,10 @@
 
 .main .heading {
   border-bottom: 1px solid #3399ff;
-  padding: 15px 40px;
+  padding: 10px 40px;
   display: flex;
   justify-content: end;
+  background-color: #9e761b;
 }
 
 .main .heading h1 {

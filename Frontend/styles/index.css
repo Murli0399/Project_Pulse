@@ -1,5 +1,7 @@
 .navbar {
-  background: #11161a;
+  /* background: #11161a; */
+  /* background: #fac742; */
+  background: #9e761b;
   width: 100%;
   height: 60px;
   position: fixed;
@@ -13,6 +15,7 @@
 .navbar h2 {
   margin-left: 80px;
   font-size: 30px;
+  color: white;
 }
 
 .navbar p {
