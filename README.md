@@ -129,7 +129,31 @@ Project Pulse is a dynamic web application designed to serve as an efficient pro
   - Response: JSON object with a success message.
 
 ### Resources:
-[Add API endpoints for resources]
+- GET /resources
+  - Description: Fetches a list of all resources.
+  - Response: JSON object with a list of resource objects.
+
+- GET /resources/{resource_id}
+  - Description: Fetches a specific resource by its unique ID.
+  - Response: JSON object with the resource details.
+
+- GET /resources/task/{task_id}
+  - Description: Fetches all resources associated with a specific task.
+  - Response: JSON object with a list of resource objects.
+
+- POST /resources
+  - Description: Creates a new resource.
+  - Request Body: JSON object containing resource details.
+  - Response: JSON object with the newly created resource details.
+
+- PUT /resources/{resource_id}
+  - Description: Updates an existing resource's details.
+  - Request Body: JSON object containing updated resource details.
+  - Response: JSON object with the updated resource details.
+
+- DELETE /resources/{resource_id}
+  - Description: Deletes a resource.
+  - Response: JSON object with a success message.
 
 ## Conclusion
 Project Pulse is a powerful project portfolio management system that leverages a modern tech stack to provide an efficient and user-friendly experience. With its extensive features and robust backend, managing and monitoring projects has never been easier. Use the provided API endpoints to interact with the system and build custom integrations for your specific needs. Harness the power of Project Pulse and elevate your project portfolio management to new heights. Happy managing!
