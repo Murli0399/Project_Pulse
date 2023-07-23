@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/manager.css" />
+    <link rel="stylesheet" href="styles/managerProfile.css" />
     <title>Project Pulse</title>
   </head>
   <body>
@@ -15,188 +16,338 @@
         <p id="taskData">Task</p>
         <p id="resourceData">Resource</p>
       </div>
-      <p class="wlc">Welcome <span id="username">Deepak</span></p>
+      <div class="tooltip wlc" onclick="toggleTooltip()">
+        Welcome <span id="username">Deepak</span>
+        <div class="tooltiptext" id="myTooltip">
+          <p id="viewProfile">View Profile</p>
+          <p id="logoutManager">Logout</p>
+        </div>
+      </div>
     </nav>
 
     <div class="container">
-      <div id="showData">
+      <div id="showData"></div>
+    </div>
+
+    <!-- Manager Model Html here do not touch it -->
+    <div id="id01" class="profile">
+      <form id="managerModel" class="profile-content animate">
+        <div class="cont">
+          <input
+            type="text"
+            id="managerName"
+            placeholder="Enter Name"
+            name="name"
+            required
+          />
+
+          <label for="bio"><b>Bio</b></label>
+          <textarea
+            id="bio"
+            placeholder="Enter Bio"
+            name="bio"
+            rows="3"
+            required
+          ></textarea>
+          <label for="role"><b>Role</b></label>
+          <input
+            type="text"
+            id="managerRole"
+            placeholder="Enter Role"
+            name="role"
+            required
+          />
+
+          <label for="email"><b>Email</b></label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter Email"
+            name="email"
+            required
+          />
 
 
-        <div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
+          <label for="uname"><b>Username</b></label>
+          <input type="text" id="managerUsername" placeholder="Enter Username" name="uname" required />
 
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
+          <label for="startdate"><b>Start Date</b></label>
+          <input type="date" id="managerStartdate" name="startdate" required />
         </div>
 
+        <div class="btnCont" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn"
+          >
+            Close
+          </button>
+          <button type="submit">Update Profile</button>
+        </div>
+      </form>
+    </div>
 
-
-        
-        <div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
-        </div><div class="resourceCard">
-          <h2>Resource Name</h2>
-          <p>Type : Planned</p>
-          <p>Link : http://link.com</p>
-          <p>Availability : Not Available</p>
-
-          <div class="data">
-            <button>Update</button>
-            <button>Delete</button>
-          </div>
-          <button>Add Resource</button>
+    <!-- Project Adding Model Html here do not touch it -->
+    <div id="id02" class="modal">
+      <form id="projectForm" class="modal-content animate">
+        <div class="imgcontainer">
+          <h1>Update Project</h1>
         </div>
 
+        <div class="cont">
+          <label for="name"><b>Project Name</b></label>
+          <input
+            type="text"
+            id="projectName"
+            placeholder="Enter Name"
+            name="name"
+            required
+          />
 
-      </div>
+          <label for="status"><b>Status</b></label>
+          <select id="projectStatus" name="status" required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="Planned">Planned</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+
+          <label for="startdate"><b>Start Date</b></label>
+          <input id="projectStartDate" type="date" name="startdate" required />
+
+          <label for="enddate"><b>End Date</b></label>
+          <input id="projectEndDate" type="date" name="enddate" required />
+        </div>
+
+        <div class="btnCont" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id02').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Task Adding Model Html here do not touch it -->
+    <div id="id03" class="modal">
+      <form id="addTaskForm" class="modal-content animate">
+        <div class="imgcontainer">
+          <h1>Add Task</h1>
+        </div>
+
+        <div class="cont">
+          <label for="name"><b>Task Name</b></label>
+          <input
+            type="text"
+            id="taskName"
+            placeholder="Enter Name"
+            name="name"
+            required
+          />
+
+          <label for="status"><b>Status</b></label>
+          <select id="taskStatus" name="status" required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="To Do">To Do</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+
+          <label for="description"><b>Description</b></label>
+          <input id="description" type="text" name="description" required />
+        </div>
+
+        <div class="btnCont" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id03').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Task Updating Model Html here do not touch it -->
+    <div id="id04" class="modal">
+      <form id="updateTaskForm" class="modal-content animate">
+        <div class="imgcontainer">
+          <h1>Update Task</h1>
+        </div>
+
+        <div class="cont">
+          <label for="name"><b>Task Name</b></label>
+          <input
+            type="text"
+            id="updateTaskName"
+            placeholder="Enter Name"
+            name="name"
+            required
+          />
+
+          <label for="status"><b>Status</b></label>
+          <select id="updateTaskStatus" name="status" required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="To Do">To Do</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+
+          <label for="updateDescription"><b>Description</b></label>
+          <input
+            id="updateDescription"
+            type="text"
+            name="updateDescription"
+            required
+          />
+        </div>
+
+        <div class="btnCont" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id04').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Resource Adding Model Html here do not touch it -->
+    <div id="id05" class="modal">
+      <form id="resourceForm" class="modal-content animate">
+        <div class="imgcontainer">
+          <h1>Add Resource</h1>
+        </div>
+
+        <div class="cont">
+          <label for="name"><b>Resource Name</b></label>
+          <input
+            type="text"
+            id="resourceName"
+            placeholder="Enter Name"
+            name="name"
+            required
+          />
+
+          <label for="type"><b>Type</b></label>
+          <input
+            type="text"
+            id="resourceType"
+            placeholder="Enter Type"
+            name="type"
+            required
+          />
+
+          <label for="link"><b>link</b></label>
+          <input
+            type="text"
+            id="resourceLink"
+            placeholder="Enter link"
+            name="link"
+            required
+          />
+
+          <label for="availability"><b>Availability</b></label>
+          <select id="resourceAvailability" name="availability" required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="Available">Available</option>
+            <option value="Not Available">Not Available</option>
+          </select>
+        </div>
+
+        <div class="btnCont" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id05').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Updating Adding Model Html here do not touch it -->
+    <div id="id06" class="modal">
+      <form id="updateResourceForm" class="modal-content animate">
+        <div class="imgcontainer">
+          <h1>Add Resource</h1>
+        </div>
+
+        <div class="cont">
+          <label for="name"><b>Resource Name</b></label>
+          <input
+            type="text"
+            id="updateResourceName"
+            placeholder="Enter Name"
+            name="name"
+            required
+          />
+
+          <label for="type"><b>Type</b></label>
+          <input
+            type="text"
+            id="updateResourceType"
+            placeholder="Enter Type"
+            name="type"
+            required
+          />
+
+          <label for="link"><b>link</b></label>
+          <input
+            type="text"
+            id="updateResourceLink"
+            placeholder="Enter link"
+            name="link"
+            required
+          />
+
+          <label for="availability"><b>Availability</b></label>
+          <select id="updateResourceAvailability" name="availability" required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="Available">Available</option>
+            <option value="Not Available">Not Available</option>
+          </select>
+        </div>
+
+        <div class="btnCont" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id06').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
   </body>
+
+  <script>
+    function toggleTooltip() {
+      var tooltip = document.getElementById("myTooltip");
+      tooltip.style.visibility =
+        tooltip.style.visibility === "visible" ? "hidden" : "visible";
+    }
+    // Hide the tooltip when clicking anywhere on the document
+    document.addEventListener("click", function (event) {
+      var tooltip = document.getElementById("myTooltip");
+      if (!event.target.closest(".tooltip")) {
+        tooltip.style.visibility = "hidden";
+      }
+    });
+  </script>
   <script src="scripts/manager.js"></script>
 </html>

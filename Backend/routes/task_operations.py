@@ -24,6 +24,35 @@ def get_all_tasks():
     return jsonify(result), 200
 
 
+def get_all_tasks_by_manager_id(manager_id):
+    manager_tasks = tasks.find({'manager_id': manager_id})
+    result = []
+    for task in manager_tasks:
+        result.append({
+            'id': str(task['_id']),
+            'project_id': task['project_id'],
+            'resource_id': task['resource_id'],
+            'task_name': task['task_name'],
+            'status': task['status'],
+            'description': task['description'],
+        })
+    return jsonify(result), 200
+
+
+def get_all_tasks_by_project_id(project_id):
+    manager_tasks = tasks.find({'project_id': project_id})
+    result = []
+    for task in manager_tasks:
+        result.append({
+            'id': str(task['_id']),
+            'project_id': task['project_id'],
+            'resource_id': task['resource_id'],
+            'task_name': task['task_name'],
+            'status': task['status'],
+            'description': task['description'],
+        })
+    return jsonify(result), 200
+
 
 def get_task(task_id):
     task = tasks.find_one({'_id': ObjectId(task_id)})
@@ -46,6 +75,7 @@ def create_task():
     data = request.get_json()
     project_id = data.get('project_id', "")
     resource_id = data.get('resource_id', "")
+    manager_id = data.get('manager_id')
     task_name = data['task_name']
     status = data['status']
     description = data['description']
@@ -56,6 +86,7 @@ def create_task():
         task_id = tasks.insert_one({
             'project_id': project_id,
             'resource_id': resource_id,
+            'manager_id': manager_id,
             'task_name': task_name,
             'status': status,
             'description': description,
@@ -74,8 +105,6 @@ def create_task():
 
 def update_task(task_id):
     data = request.get_json()
-    project_id = data.get('project_id', "")
-    resource_id = data.get('resource_id', "")
     task_name = data['task_name']
     status = data['status']
     description = data['description']
@@ -85,8 +114,6 @@ def update_task(task_id):
     updated_task = tasks.update_one(
         {'_id': ObjectId(task_id)},
         {'$set': {
-            'project_id': project_id,
-            'resource_id': resource_id,
             'task_name': task_name,
             'status': status,
             'description': description,

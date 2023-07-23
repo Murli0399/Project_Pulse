@@ -32,7 +32,7 @@
 }
 
 
-.navbar div {
+.navbar .page {
   width: 20%;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,7 @@
   font-weight: 400;
 }
 
-.navbar div p:hover {
+.navbar .page p:hover {
   transition: .5s;
   color: #3399ff;
   cursor: pointer;
@@ -64,7 +64,7 @@
 }
 
 .container #showData .card {
-  width: 22%;
+  width: 250px;
   border: 1px solid #3399ff;
   padding: 20px;
   background: #303030;
@@ -95,9 +95,9 @@
 }
 
 .container #showData .card .data button {
-  width: 100px;
+  width: 110px;
   margin: 5px 0;
-  padding: 8px 15px;
+  padding: 10px 15px;
   font-size: 14px;
   font-weight: 600;
   color: rgb(255 255 255);
@@ -136,7 +136,7 @@
 
 .container #showData .taskCard .data button {
   width: 116px;
-  margin-top: 10px;
+  margin: 5px 0;
   padding: 10px 8px;
   font-size: 14px;
   font-weight: 600;
@@ -169,7 +169,7 @@
 
 .container #showData .resourceCard button {
   width: 250px;
-  margin-top: 12px;
+  margin-top: 0;
   padding: 12px 8px;
   font-size: 15px;
   font-weight: 600;
@@ -183,4 +183,151 @@
   width: 116px;
   margin-top: 10px;
   font-size: 14px;
+}
+
+
+
+
+
+
+
+/* ============================================= */
+
+/* model css her  */
+form {
+  border: 3px solid #f1f1f1;
+}
+
+input[type=text],
+input[type=email],
+input[type=date],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button {
+  background-color: #3399ff;
+  color: white;
+  padding: 10px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+.cont {
+  padding: 10px 25px;
+}
+
+.btnCont {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px 25px 25px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto;
+  border: 1px solid #888;
+  width: 35%;
+  border-radius: 5px;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+/* ----------------------------------*/
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #333; /* Dark gray */
+  color: #fff; /* White */
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -110px;
+  margin-top: 5px;
+}
+
+.tooltip .tooltiptext p {
+  font-size: 20px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext p:hover {
+  transition: .5s;
+  background: #666; /* Darker gray on hover */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

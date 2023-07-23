@@ -16,7 +16,8 @@ from routes.project_operations import (
     update_project,
     get_projects_with_empty_manager,
     delete_project,
-    update_project_manager
+    update_project_manager,
+    get_projects_by_manager_id
 )
 from routes.task_operations import (
     get_all_tasks,
@@ -24,14 +25,17 @@ from routes.task_operations import (
     create_task,
     update_task,
     delete_task,
-    count_tasks_by_resource
+    count_tasks_by_resource,
+    get_all_tasks_by_manager_id,
+    get_all_tasks_by_project_id
 )
 from routes.resource_operations import (
     get_all_resources,
     get_resource,
     create_resource,
     update_resource,
-    delete_resource
+    delete_resource,
+    get_all_resources_by_task_id
 )
 from routes.login_logout import (
     login,
@@ -66,12 +70,15 @@ app.route('/managers/<string:manager_id>', methods=['DELETE'])(delete_manager)
 app.route('/projects', methods=['GET'])(get_all_projects)
 # Get a single project route - Fetches a specific project by its unique project_id.
 app.route('/projects/<string:project_id>', methods=['GET'])(get_project)
+# Get all projects where manager is
+app.route('/projects/manager/<string:manager_id>', methods=['GET'])(get_projects_by_manager_id)
 # Get all projects where manager is empty
 app.route('/projects/empty_manager', methods=['GET'])(get_projects_with_empty_manager)
 # Create a new project route - Adds a new project to the database.
 app.route('/projects', methods=['POST'])(create_project)
 # Update a project route - Modifies an existing project in the database.
 app.route('/projects/<string:project_id>', methods=['PUT'])(update_project)
+
 app.route('/projects/manager/<string:project_id>', methods=['PUT'])(update_project_manager)
 # Delete a project route - Removes a project from the database.
 app.route('/projects/<string:project_id>', methods=['DELETE'])(delete_project)
@@ -80,6 +87,10 @@ app.route('/projects/<string:project_id>', methods=['DELETE'])(delete_project)
 app.route('/tasks', methods=['GET'])(get_all_tasks)
 # Route for getting a specific task by task_id
 app.route('/tasks/<string:task_id>', methods=['GET'])(get_task)
+# Get all tasks by manager id
+app.route('/tasks/manager/<string:manager_id>', methods=['GET'])(get_all_tasks_by_manager_id)
+# Get all tasks by project id
+app.route('/tasks/project/<string:project_id>', methods=['GET'])(get_all_tasks_by_project_id)
 # Route for getting a specific task by task_id
 app.route('/tasks/resources/<string:resource_id>', methods=['GET'])(count_tasks_by_resource)
 # Route for creating a task
@@ -91,6 +102,8 @@ app.route('/tasks/<string:task_id>', methods=['DELETE'])(delete_task)
 
 # Route for getting all resources
 app.route('/resources', methods=['GET'])(get_all_resources)
+# Route for getting a all resource by task_id
+app.route('/resources/task/<string:task_id>', methods=['GET'])(get_all_resources_by_task_id)
 # Route for getting a specific resource by resource_id
 app.route('/resources/<string:resource_id>', methods=['GET'])(get_resource)
 # Route for creating a resource

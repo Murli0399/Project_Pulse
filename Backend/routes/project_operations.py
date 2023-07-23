@@ -35,6 +35,24 @@ def get_projects_with_empty_manager():
     return jsonify(result), 200
 
 
+def get_projects_by_manager_id(manager_id):
+    # Retrieve all projects where manager_id is an empty string
+    empty_manager_projects = projects.find({'manager_id': manager_id})
+
+    result = []
+    for project in empty_manager_projects:
+        result.append({
+            'id': str(project['_id']),
+            'project_name': project['project_name'],
+            'status': project['status'],
+            'start_date': project['start_date'],
+            'end_date': project['end_date'],
+        })
+
+    return jsonify(result), 200
+
+
+
 def get_project(project_id):
     project = projects.find_one({'_id': ObjectId(project_id)})
     if project:
@@ -77,7 +95,7 @@ def create_project():
     except DuplicateKeyError as e:
         # Handle the case when the index already exists
         error_msg = "Error: Project name is already registered. Please choose a different project name."
-        return jsonify({'error': error_msg}), 409  # HTTP status code 409 for Conflict
+        return jsonify({'message': error_msg}), 409  # HTTP status code 409 for Conflict
 
 
 def update_project_manager(project_id):
@@ -121,9 +139,10 @@ def update_project(project_id):
     )
 
     if updated_project.modified_count > 0:
-        return jsonify({'message': 'Project updated'}), 200
+        return jsonify({'message': 'Project updated successfully'}), 200
     else:
-        return jsonify({'message': 'Project not found'}), 404
+        return jsonify({'message': 'Project not found or no changes were made'}), 404
+
 
 
 
