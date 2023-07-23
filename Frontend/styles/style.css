@@ -4,7 +4,8 @@
 }
 
 body {
-  background: #141a1f;
+  /* background: #141a1f; */
+  background: #fcfcd0;
   color: #3399ff;
   font-family: "General Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }

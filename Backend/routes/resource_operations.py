@@ -19,6 +19,21 @@ def get_all_resources():
     return jsonify(result), 200
 
 
+def get_all_resources_by_task_id(task_id):
+    task_resources = resources.find({'task_id': task_id})
+    result = []
+    for resource in task_resources:
+        result.append({
+            'id': str(resource['_id']),
+            'task_id': resource['task_id'],
+            'resource_name': resource['resource_name'],
+            'type': resource['type'],
+            'link': resource['link'],
+            'availability': resource['availability'],
+        })
+    return jsonify(result), 200
+
+
 
 def get_resource(resource_id):
     resource = resources.find_one({'_id': ObjectId(resource_id)})
@@ -69,7 +84,6 @@ def create_resource():
 
 def update_resource(resource_id):
     data = request.get_json()
-    task_id = data.get('task_id', "")
     resource_name = data['resource_name']
     resource_type = data['type']
     link = data['link']
@@ -80,7 +94,6 @@ def update_resource(resource_id):
     updated_resource = resources.update_one(
         {'_id': ObjectId(resource_id)},
         {'$set': {
-            'task_id': task_id,
             'resource_name': resource_name,
             'type': resource_type,
             'link':link,

@@ -72,9 +72,9 @@ def create_manager():
             'password': password,
         }).inserted_id
 
-        subject = "Login Credential"
+        subject = "Welcome to Project Pulse! Your Login Credentials Inside"
         recipient = email
-        body = "Your Login credential is here\n username = your email id\n password is "+password
+        body = f"Dear Manager,\n\nThank you for joining our team!\n\nYour login credentials are as follows:\n\nEmail: {email}\nPassword: {password}\n\nWe recommend keeping your password secure and not sharing it with anyone. If you have any questions or need further assistance, please don't hesitate to reach out to our support team.\n\nBest regards,\nProject Pulse Team"
 
         if send_email(subject, recipient, body):
              print("Email sent successfully")
@@ -93,22 +93,18 @@ def update_manager(manager_id):
     data = request.json
     name = data.get('name')
     email = data.get('email')
-    status = data.get('status')
     role = data.get('role')
     bio = data.get('bio')
     start_date = datetime.strptime(data.get('start_date'), '%Y-%m-%d')
     username = data.get('username')
-    password = data.get('password')
 
     result = managers.update_one({'_id': ObjectId(manager_id)}, {'$set': {
         'name': name,
         'email': email,
-        'status': status,
         'role': role,
         'bio': bio,
         'start_date': start_date,
         'username': username,
-        'password': password,
     }})
 
     if result.matched_count > 0:
