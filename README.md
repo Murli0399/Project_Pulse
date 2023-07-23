@@ -18,6 +18,10 @@ Manage project resources, including availability and task assignments.
 ### Real-time Collaboration:
 Enable real-time collaboration among team members for effective project management.
 
+## Entity Relationship Diagrams
+[Provide your Entity Relationship Diagrams here]
+
+
 ## Tech Stack
 ### Backend:
 - Language: Python
@@ -29,8 +33,7 @@ Enable real-time collaboration among team members for effective project manageme
 - State management: Redux (for managing application state)
 - UI framework: Material-UI (provides pre-styled components following the Material Design guidelines)
 - HTTP client: Axios (for making API requests to the backend)
-## Entity Relationship Diagrams
-[Provide your Entity Relationship Diagrams here]
+
 
 ## API Endpoints
 ### Authentication:
