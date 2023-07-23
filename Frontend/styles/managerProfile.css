@@ -49,8 +49,8 @@ textarea {
 }
 
 .profile-content #managerName {
-  font-size: 35px;
   color: #3399ff;
+  font-size: 35px;
   font-weight: 600;
   font-family: none;
 }
@@ -72,11 +72,12 @@ textarea {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+  /* padding-top: 60px; */
 }
 
 .profile-content {
   background-color: #fefefe;
+  color: #3399ff;
   margin: 5px auto;
   border: 1px solid #888;
   width: 35%;

@@ -10,7 +10,8 @@
 #dashboardView #show_dashboard .card {
   width: 250px;
   height: 150px;
-  background-color: #303030;
+  /* background-color: #303030; */
+  background-color: #9e761b;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 20px;
@@ -22,7 +23,7 @@
 #dashboardView #show_dashboard .card h2 {
   margin: 0;
   font-size: 25px;
-  color: #3399ff;
+  color: #ffffff;
   text-align: center;
   font-weight: 500;
 }
@@ -30,7 +31,7 @@
 #dashboardView #show_dashboard .card p {
   margin: 0;
   font-size: 18px;
-  color: #777;
+  color: #c2c2c2;
 }
 
 #dashboardView .graphImg {

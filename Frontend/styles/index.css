@@ -86,7 +86,7 @@ select {
 }
 
 button {
-  background-color: #3399ff;
+  background-color: #9e761b;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -142,6 +142,7 @@ span.psw {
   border: 1px solid #888;
   width: 30%;
   border-radius: 5px;
+  color: #3399ff;
 }
 
 .animate {
