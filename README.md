@@ -93,9 +93,42 @@ Project Pulse is a dynamic web application designed to serve as an efficient pro
   - Response: JSON object with a success message.
 
 ### Tasks:
-[Add API endpoints for tasks]
+- GET /tasks
+  - Description: Fetches a list of all tasks.
+  - Response: JSON object with a list of task objects.
 
-Resources:
+- GET /tasks/{task_id}
+  - Description: Fetches a specific task by its unique ID.
+  - Response: JSON object with the task details.
+
+- GET /tasks/manager/{manager_id}
+  - Description: Fetches all tasks managed by a specific manager.
+  - Response: JSON object with a list of task objects.
+
+- GET /tasks/project/{project_id}
+  - Description: Fetches all tasks associated with a specific project.
+  - Response: JSON object with a list of task objects.
+
+- POST /tasks
+  - Description: Creates a new task.
+  - Request Body: JSON object containing task details.
+  - Response: JSON object with the newly created task details.
+
+- PUT /tasks/{task_id}
+  - Description: Updates an existing task's details.
+  - Request Body: JSON object containing updated task details.
+  - Response: JSON object with the updated task details.
+
+- DELETE /tasks/{task_id}
+  - Description: Deletes a task.
+  - Response: JSON object with a success message.
+
+- PUT /tasks/resources/{resource_id}
+  - Description: Assigns a resource to a task.
+  - Request Body: JSON object containing task_id.
+  - Response: JSON object with a success message.
+
+### Resources:
 [Add API endpoints for resources]
 
 ## Conclusion
