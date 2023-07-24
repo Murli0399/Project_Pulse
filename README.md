@@ -194,7 +194,7 @@ Your support is greatly appreciated.
 
 ## Authors
 
-- [Murli](https://github.com/Murli0399)
+- [Murli Khaire](https://github.com/Murli0399)
 
 ## Acknowledgements
 
