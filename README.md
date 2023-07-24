@@ -176,3 +176,18 @@ Enable real-time collaboration among team members for effective project manageme
 
 ## Conclusion
 Project Pulse is a powerful project portfolio management system that leverages a modern tech stack to provide an efficient and user-friendly experience. With its extensive features and robust backend, managing and monitoring projects has never been easier. Use the provided API endpoints to interact with the system and build custom integrations for your specific needs. Harness the power of Project Pulse and elevate your project portfolio management to new heights. Happy managing!
+
+
+## 🔗 Contact Me
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://murli0399.github.io/)
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/murli-khaire/)
+
+
+## Authors
+
+- [Murli](https://github.com/Murli0399)
+
+## Acknowledgements
+
+- [Masai School](https://www.masaischool.com/)
