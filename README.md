@@ -174,9 +174,17 @@ Enable real-time collaboration among team members for effective project manageme
   - Description: Deletes a resource.
   - Response: JSON object with a success message.
 
-## Conclusion
-Project Pulse is a powerful project portfolio management system that leverages a modern tech stack to provide an efficient and user-friendly experience. With its extensive features and robust backend, managing and monitoring projects has never been easier. Use the provided API endpoints to interact with the system and build custom integrations for your specific needs. Harness the power of Project Pulse and elevate your project portfolio management to new heights. Happy managing!
+## Contributions
 
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **Greatly Appreciated**.
+
+If you have any ideas on how to improve this web service, please feel free to fork the repository and submit a pull request. Your contributions, no matter how big or small, are greatly appreciated and will help to make this repository even better.
+
+In addition to contributing to the repository, you can also connect with me for further development and collaboration on this System. Together, we can continue to improve and evolve the application to meet the needs of the community.
+
+We encourage you to give the repository a star and we thank you for your interest in this project. 
+
+Your support is greatly appreciated.
 
 ## 🔗 Contact Me
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://murli0399.github.io/)
