@@ -7,6 +7,9 @@ Project Pulse is a dynamic web application designed to serve as an efficient pro
 - [Backend](https://project-pulse-giib.onrender.com/)
 - [Frontend](https://project-pulse.vercel.app/)
 
+## Presentation Link
+- [Video](https://youtu.be/s5ELVaGRDOI)
+
 ## Features
 ### User Authentication:
 Securely manage access to the application with user authentication and session management.
