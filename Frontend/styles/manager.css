@@ -67,16 +67,19 @@
 .container #showData .card {
   width: 250px;
   padding: 20px;
-  background: #9e761b;
-  color: #fff;
+  background: #fac742;
+  color: #000000;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .container #showData h2 {
-  margin-bottom: 10px;
   font-weight: 600;
-  color: #3399ff;
+  background: #9e761b;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
 }
 
 
@@ -103,15 +106,15 @@
   font-weight: 600;
   color: rgb(255 255 255);
   border: none;
-  background: #c9b200;
+  background: #9e761b;
   cursor: pointer;
 }
 
 .container #showData .taskCard {
-  width: 260px;
+  width: 250px;
   padding: 20px;
-  background: #9e761b;
-  color: #fff;
+  background: #fac742;
+  color: #000000;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -143,7 +146,7 @@
   font-weight: 600;
   color: rgb(255 255 255);
   border: none;
-  background: #c9b200;
+  background: #9e761b;
   cursor: pointer;
 }
 
@@ -151,8 +154,8 @@
 .container #showData .resourceCard {
   width: 250px;
   padding: 20px;
-  background: #9e761b;
-  color: #fff;
+  background: #fac742;
+  color: #000000;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -176,7 +179,7 @@
   font-weight: 600;
   color: rgb(255 255 255);
   border: none;
-  background: #c9b200;
+  background: #9e761b;
   cursor: pointer;
 }
 

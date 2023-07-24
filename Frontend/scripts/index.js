@@ -8,8 +8,8 @@ if (currentUser != undefined && currentUser.role == "Manager") {
   window.location.href = "admin.html";
 }
 
-const url = "https://project-pulse-giib.onrender.com/";
-// const url = "http://127.0.0.1:5000/";
+// const url = "https://project-pulse-giib.onrender.com/";
+const url = "http://127.0.0.1:5000/";
 
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
