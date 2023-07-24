@@ -4,7 +4,7 @@ Project Pulse is a dynamic web application designed to serve as an efficient pro
 
 
 ## Deployment Links
-- [Backend]()
+- [Backend](https://project-pulse-giib.onrender.com/)
 - [Frontend](https://project-pulse.vercel.app/)
 
 ## Features
