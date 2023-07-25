@@ -5,10 +5,16 @@ Project Pulse is a dynamic web application designed to serve as an efficient pro
 
 ## Deployment Links
 - [Backend](https://project-pulse-giib.onrender.com/)
-- [Frontend](https://project-pulse.vercel.app/)
+- [Frontend](https://regal-toffee-5eb857.netlify.app/)
+
 
 ## Presentation Link
 - [Video](https://youtu.be/s5ELVaGRDOI)
+
+
+## Admin Login Credential
+- Username - admin
+- Password - admin1234
 
 ## Features
 ### User Authentication:
