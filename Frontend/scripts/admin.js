@@ -8,8 +8,8 @@ resource = document.getElementById("resource");
 resourceView = document.getElementById("resourceView");
 show_manager = document.getElementById("show_manager");
 
-// const url = "https://project-pulse-giib.onrender.com/";
-const url = "http://127.0.0.1:5000/";
+const url = "https://project-pulse-giib.onrender.com/";
+// const url = "http://127.0.0.1:5000/";
 
 let currentManager = "";
 const key = "projectPulseUser";

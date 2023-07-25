@@ -4,8 +4,8 @@ let currentUser = JSON.parse(localStorage.getItem(key));
 if (currentUser == undefined || currentUser.role == "Admin") {
   window.location.href = "index.html";
 }
-// const url = "https://project-pulse-giib.onrender.com/";
-const url = "http://127.0.0.1:5000/";
+const url = "https://project-pulse-giib.onrender.com/";
+// const url = "http://127.0.0.1:5000/";
 
 
 fetch(url + "managers/" + currentUser.id)
