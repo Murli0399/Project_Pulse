@@ -16,6 +16,10 @@ Project Pulse is a dynamic web application designed to serve as an efficient pro
 - Username - admin
 - Password - admin1234
 
+## Manager Login Credential
+- Username - murlikhaire28
+- Password - tRkchr
+
 ## Features
 ### User Authentication:
 Securely manage access to the application with user authentication and session management.
