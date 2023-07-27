@@ -67,7 +67,7 @@ Enable real-time collaboration among team members for effective project manageme
 
 - POST /logout
   - Description: Logs out the current user and invalidates the session token.
-  - Request Body: JSON object containing token field with the session token.
+  - Request Body: JSON object containing a token field with the session token.
   - Response: JSON object with a success message.
 
 ### Managers:
