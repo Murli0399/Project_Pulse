@@ -47,10 +47,9 @@ Enable real-time collaboration among team members for effective project manageme
 - Database: MongoDB (a NoSQL database for storing the application data)
 - ORM (Object-Relational Mapping): pymongo (Python library for MongoDB)
 ### Frontend:
-- JavaScript library: React (for building user interfaces)
-- State management: Redux (for managing application state)
-- UI framework: Material-UI (provides pre-styled components following the Material Design guidelines)
-- HTTP client: Axios (for making API requests to the backend)
+- Html
+- CSS
+- JavaScript
 
 
 ## API Endpoints
